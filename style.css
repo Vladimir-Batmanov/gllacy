@@ -1,0 +1,37 @@
+body { 
+    width: 1200px;
+    height: 2416px;
+    background-color: #849d8f;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #323232;
+  
+}
+
+.description-svg-cream {
+    background: url("img/ice-cream.svg") no-repeat;
+}
+
+.description-svg-eco {
+    background: url("img/eco.svg") no-repeat;
+}
+
+.description-svg-cow {
+    background: url("img/cow.svg") no-repeat;
+}
+
+.description-svg-thermometer {
+    background: url("img/thermometer.svg") no-repeat;
+}   
+
+.customer-service {
+    background: url("img/background-aboutshop.jpg") no-repeat;
+    width: 1146px;
+    height: 306px;
+}
+
+.mailing {
+    background: url("img/bg-post.svg") no-repeat;
+    width: 560px;
+    height: 220px;
+}
