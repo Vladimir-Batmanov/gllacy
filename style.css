@@ -36,6 +36,17 @@ body {
     height: 220px;
 }
 
+.heart {
+   position: relative;
+}
+
 .heart::before {
+    content: "";
+    position: absolute;
     background: url("img/heart.svg") no-repeat;
+    width: 108px;
+    height: 39px;
+    left: 0;
+    top: 5px;
+    
 }
