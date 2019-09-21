@@ -35,3 +35,7 @@ body {
     width: 560px;
     height: 220px;
 }
+
+.heart::before {
+    background: url("img/heart.svg") no-repeat;
+}
