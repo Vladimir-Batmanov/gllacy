@@ -62,8 +62,8 @@
                                 </span>
                                 Вход
                             </a>
-                            <div class="modal-entrance">
-                                <form class="form" action="https://echo.htmlacademy.ru" method="post" name="user-page">
+                            <div class="modal-form">
+                                <form class="form" action="" method="post" name="user-page">
                                     <label for="user-login">Электронная почта</label>
                                     <div class="form__group">
                                         <input type="email" id="user-login" name="login" placeholder="Электронная почта">
@@ -72,12 +72,14 @@
                                     <div class="form__group">
                                         <input type="password" id="user-password" name="password" placeholder="Пароль">
                                     </div>
-                                    <button class="button button--full-width" type="submit" data-submit-text="Вхожу…" value="Войти">
+                                    <button class="button button--full-width" type="submit" data-submit-text="Вхожу…">
+                                        Войти
+                                    </button>
                                 </form>
-                                <p class="modal-entrance__forgot-password">
+                                <p class="modal-form__forgot-password">
                                     <a href="#" data-modal="open" data-value="recover">Забыли пароль?</a>
                                 </p>    
-                                <a href="#" class="modal-entrance__bottom-link" data-modal="open" data-value="register">Новая регистрация</a>
+                                <a href="#" class="modal-form__bottom-link" data-modal="open" data-value="register">Новая регистрация</a>
                             </div>
                         </div>
                     </li>
@@ -388,5 +390,26 @@
                 </p>
             </div>
         </footer>
+        <section class="form2">
+            <div class="modal-entrance">
+                <button class="modal__close icon-close" type="button" title="Закрыть" data-modal="close" data-value="login"></button>
+                <p>Мы обязательно вам ответим!</p>
+                <form action="https://echo.htmlacademy.ru" method="post" name="userfield-form">
+                    <label for="userfield-id" class="visually-hidden">Ваше имя</label>
+                    <div class="form__group">
+                        <input type="text" name="username" id="userfield-id" placeholder="Как вас зовут?">
+                    </div>
+                    <label for="userfield-mail" class="visually-hidden">Электронная почта</label>
+                    <div class="form__group">
+                        <input type="email" name="user-mail" id="userfield-mail" placeholder="Ваша почта для ответа?">
+                    </div>
+                    <textarea name="user-message" id="userfield-message" rows="5" placeholder="Напишите что-нибудь..." aria-label="Поле для ввода сообщения"></textarea>
+                    <button type="submit" class="submit-button">Отправить</button>
+                </form>
+                <p class="modal-entrance__forgot-password">
+                    <a href="#" data-modal="open" data-value="recover">Забыли пароль?</a>
+                </p>    
+            </div>
+        </section>
     </body>
 </html>
