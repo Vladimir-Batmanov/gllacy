@@ -1,0 +1,160 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-weight: 400;
+    font-family: PT Sans, Arial, sans-serif;
+    background: #666;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+  
+.price {
+    position: relative;
+    top: -15px;
+}  
+ 
+.form-price-sorting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: hsl(196, 24%, 22%);
+}
+
+  
+  
+.form-price-sorting__range {
+    width: 318px;
+    padding: 0;
+    border: none;
+    color: hsl(0, 0%, 100%);
+}
+  
+.range-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+  
+.range-controls {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 32px;
+    margin-top: 9px;
+    margin-bottom: 54px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 2px;
+}
+  
+.form-price-sorting__range {
+    background: rgb(194, 6, 6);
+} 
+  
+.range-label {
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 5px;
+}
+  
+.range-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 32px;
+}
+  
+.range-label-min::before {
+    left: 0;
+}
+.range-label-max::before {
+    right: 0;
+}
+  
+.range-scale {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: hsla(0, 0%, 100%, 0.3);
+}
+
+.range-bar {
+    position: absolute;
+    left: calc(100% * 0 / 5000);
+    right: calc(100% * (5000 - 3000) / 5000);
+    height: 5px;
+    background: hsl(0, 0%, 100%);
+}
+  
+.range-lever {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -30px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    background: hsl(0, 0%, 67%);
+    border: 8px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 hsla(0, 0%, 0%, 0.2);
+    cursor: grab;
+}
+  
+.range-lever:active {
+    cursor: grabbing;
+}
+  
+.range-lever:hover {
+    background: hsl(209, 64%, 31%);
+}
+  
+.range-lever-min {
+    left: calc(100% * 0 / 5000 - 20px / 2);
+}
+  
+.range-lever-max {
+    left: calc(100% * 3000 / 5000 - 20px / 2);
+}
+  
+.range-input:focus + .range-lever {
+    box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.5);
+}
+  
+.btn-transparent {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    line-height: 20px;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 2px;
+    cursor: pointer;
+}
+  
+.btn-transparent:hover,
+.btn-transparent:focus {
+    color: hsl(0, 0%, 0%);
+    background: hsl(0, 0%, 100%);
+}
+  
+.btn-transparent:focus::-moz-focus-inner {
+    border: 0;
+}
+  
