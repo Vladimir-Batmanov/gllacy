@@ -10,10 +10,9 @@ var range = {
   var leverMax = document.querySelector('.range-lever-max')
   var scaleLength = document.querySelector('.range-scale').offsetWidth
   form.price[0].step = range.step
-  form.price[0].step = range.step
   form.price[1].max = range.max
   
-  var onValuesGetting = function () {
+var onValuesGetting = function () {
     var valueMin = form.price[0].value
     var valueMax = form.price[1].value
     var leverMinPos = 100 * valueMin / range.max + '%'
@@ -28,7 +27,7 @@ var range = {
     leverMax.style.left = 'calc(' + leverMaxPos + ' - ' + leverMax.offsetWidth / 2 + 'px)'
   }
   
-  var onLeverGrabbing = function (event) {
+var onLeverGrabbing = function (event) {
     event.preventDefault()
     var isEventTouch = event.type === 'touchstart'
     var eventMove = isEventTouch ? 'touchmove' : 'mousemove'
@@ -37,9 +36,9 @@ var range = {
     var moveStart = isEventTouch ? event.changedTouches[0].pageX : event.pageX
     var moveEnd = moveStart
     var initialValue = parseInt(control.value, 10)
-  
+
     var getNewValue = function () {
-      return Math.round((moveEnd - moveStart) * range.max / (range.step * scaleLength)) * range.step + initialValue
+    return Math.round((moveEnd - moveStart) * range.max / (range.step * scaleLength)) * range.step + initialValue
     }
   
     var onLeverMoving = function (event) {
